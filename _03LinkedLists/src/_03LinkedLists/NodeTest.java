@@ -21,6 +21,18 @@ public class NodeTest {
 		
 		System.out.println("--- test5 ---");
 		System.out.println(Node.createLList(5, 3));
+		
+		System.out.println("--- Test Sorted LList 1 ---");
+		System.out.println(Node.createSortedLList(5, 5));
+		
+		System.out.println("---  Test Sorted LList 2 ---");
+		System.out.println(Node.createSortedLList(10, 3));
+		
+		System.out.println("---  Test Sorted LList 3 ---");
+		System.out.println(Node.createSortedLList(0, 3));
+		
+		System.out.println("---  Test Sorted LList 4 ---");
+		System.out.println(Node.createSortedLList(1, 9));
 	}
 
 }

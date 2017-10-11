@@ -17,6 +17,35 @@ public class Node{
 		this(val, null);
 	}
 	
+	public static Node createSortedLList(int start, int size, int maxGap) {
+		Node head = new Node(-1);
+		Node curr = head;
+		int val = start; 
+		Random rand = new Random();
+		while(size > 0) {
+			curr.next = new Node(val);
+			size--;
+			curr = curr.next;
+			val += rand.nextInt(maxGap);
+		}
+		return head.next;
+	}
+	
+	// 0 1 3 4 4 5
+	public static Node createSortedLList(int size, int maxGap) {
+		Node head = new Node(-1);
+		Node curr = head;
+		int val = 0; 
+		Random rand = new Random();
+		while(size > 0) {
+			val += rand.nextInt(maxGap);
+			curr.next = new Node(val);
+			size--;
+			curr = curr.next;
+		}
+		return head.next;
+	}
+	
 	// 8 9 0 2
 	// -1 -> 8 -> 9 -> 0 -> 2
 	public static Node createLList(int size, int max) {
