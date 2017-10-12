@@ -52,6 +52,9 @@ public class Node{
 		Node head = new Node(-1);
 		Node curr = head;
 		Random rand = new Random();
+		if(max == 0) {
+			max = 1;
+		}
 		while(size > 0) {
 			curr.next = new Node(rand.nextInt(max));
 			size--;
