@@ -13,33 +13,36 @@ public class _07_RemoveElement {
 	public static void main(String[] args) {
 		System.out.println("-- test 1 --");
 		Node n = null;
+		Node n2 = n;
 		System.out.println(n + ": " + remove(n, 5));
-		System.out.println(n + ": " + removeRec(n, 5));
+		System.out.println(n2 + ": " + remove(n2, 5));
+		
 		System.out.println();
 		
 		System.out.println("-- test 2 --");
 		n = new Node(2);
+		n2 = n;
 		System.out.println(n + ": " + remove(n, 5));
-		System.out.println(n + ": " + removeRec(n, 5));
+		System.out.println(n2 + ": " + removeRec(n2, 5));
 		System.out.println();
 		
 		System.out.println("-- test 3 --");
 		System.out.println(n + ": " + remove(n, 2));
-		System.out.println(n + ": " + removeRec(n, 2));
+		System.out.println(n2 + ": " + removeRec(n2, 2));
 		System.out.println();
 		
 		Random rand = new Random();
 		int size, max, val;
 		for(int i = 0; i < 10; i++) {
 			size = rand.nextInt(10) + 5;
-			max = rand.nextInt(10);
-			val = rand.nextInt(10);
+			max = rand.nextInt(8);
+			val = rand.nextInt(max + 1);
 			System.out.println("-- test " + (4 + i) + "--");
 			System.out.println("size: " + size +",max: " + max + ",val: " + val);
 			n = Node.createLList(size, max);
-			Node n2 = n;
-//			System.out.println(n + "\n" + remove(n, val) + " (val: " + val + ")");
-			System.out.println(n + "\n" + removeRec(n, val) + " (val: " + val + ")");
+			n2 = n;
+			System.out.println(n + "\n" + remove(n, val) + " (val: " + val + ")");
+			System.out.println(n2 + "\n" + removeRec(n2, val) + " (val: " + val + ")");
 			System.out.println();
 		}
 	}

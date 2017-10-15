@@ -17,6 +17,18 @@ public class Node{
 		this(val, null);
 	}
 	
+	public static Node clone(Node node) {
+		Node head = new Node(-1);
+		Node curr = node;
+		Node newcurr = head;
+		while(curr != null) {
+			newcurr.next = new Node(curr.val);
+			newcurr = newcurr.next;
+			curr = curr.next;
+		}
+		return head.next;
+	}
+	
 	public static Node createSortedLList(int start, int size, int maxGap) {
 		Node head = new Node(-1);
 		Node curr = head;
