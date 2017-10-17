@@ -13,7 +13,10 @@ public class _07_RemoveElement {
 	public static void main(String[] args) {
 		System.out.println("-- test 1 --");
 		Node n = null;
-		Node n2 = n;
+		Node n2 = Node.clone(n);
+		
+		// null
+		
 		System.out.println(n + ": " + remove(n, 5));
 		System.out.println(n2 + ": " + remove(n2, 5));
 		
@@ -21,7 +24,7 @@ public class _07_RemoveElement {
 		
 		System.out.println("-- test 2 --");
 		n = new Node(2);
-		n2 = n;
+		n2 = Node.clone(n);
 		System.out.println(n + ": " + remove(n, 5));
 		System.out.println(n2 + ": " + removeRec(n2, 5));
 		System.out.println();
@@ -40,7 +43,7 @@ public class _07_RemoveElement {
 			System.out.println("-- test " + (4 + i) + "--");
 			System.out.println("size: " + size +",max: " + max + ",val: " + val);
 			n = Node.createLList(size, max);
-			n2 = n;
+			n2 = Node.clone(n);
 			System.out.println(n + "\n" + remove(n, val) + " (val: " + val + ")");
 			System.out.println(n2 + "\n" + removeRec(n2, val) + " (val: " + val + ")");
 			System.out.println();
