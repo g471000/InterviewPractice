@@ -28,6 +28,7 @@ public class Node{
 		}
 		return head.next;
 	}
+
 	
 	public static Node createLList(int[] array) {
 		Node head = new Node(-1);
