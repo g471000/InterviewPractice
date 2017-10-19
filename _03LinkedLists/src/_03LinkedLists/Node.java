@@ -29,6 +29,16 @@ public class Node{
 		return head.next;
 	}
 	
+	public static Node createLList(int[] array) {
+		Node head = new Node(-1);
+		Node curr = head;
+		for(int i = 0; i < array.length; i++) {
+			curr.next = new Node(array[i]);
+			curr = curr.next;
+		}
+		return head.next;
+	}
+	
 	public static Node createSortedLList(int start, int size, int maxGap) {
 		Node head = new Node(-1);
 		Node curr = head;

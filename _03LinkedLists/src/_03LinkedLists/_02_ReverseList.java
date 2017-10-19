@@ -21,7 +21,6 @@ public class _02_ReverseList {
 		Node node4 = Node.createLList(10, 10);
 		System.out.println(node4);
 		System.out.println(reverse(node4));
-
 	}
 
 	public static Node reverse(Node head) {
